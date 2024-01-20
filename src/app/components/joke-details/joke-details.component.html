@@ -1,0 +1,41 @@
+<div class="modal-container" *ngIf="suggestedJokes">
+  <h1>Joke Details</h1>
+  <mat-card>
+    <div>
+      <mat-label>Setup:</mat-label>
+      <p >{{ data.setup }}</p>
+    </div>
+    <mat-divider></mat-divider>
+    <div *ngIf="data.delivery">
+      <mat-label>Delivery:</mat-label>
+      <p >{{ data.delivery }}</p>
+    </div>
+    <div>
+      <mat-label>Category:</mat-label>
+      <p >{{ data.category }}</p>
+    </div>
+    <div>
+      <mat-label>Type:</mat-label>
+      <p >{{ data.type }}</p>
+    </div>
+    <div>
+      <mat-label>Delivery:</mat-label>
+      <p >{{ data.delivery }}</p>
+    </div>
+    <!-- <div>
+      <mat-label>Flags:</mat-label>
+      <ng-container *ngFor="let flag of data.flags">
+        <p  *ngIf="flag">
+          {{ data.delivery }}
+        </p>
+      </ng-container>
+    </div> -->
+  </mat-card>
+  <mat-divider></mat-divider>
+  <h3>Suggested Jokes:</h3>
+  <ul>
+    <li *ngFor="let suggestedJoke of suggestedJokes">
+      <a (click)="openSuggestedJoke(suggestedJoke)">{{suggestedJoke.setup}}</a>
+    </li>
+  </ul>
+</div>

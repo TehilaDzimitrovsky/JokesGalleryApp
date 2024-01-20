@@ -1,0 +1,12 @@
+<h1>Jokes Gallery</h1>
+<div class="card-container">
+  <mat-card *ngFor="let joke of jokes">
+    <mat-card-content>
+      <p>{{ joke.setup }}</p>
+      <p *ngIf="joke.delivery">{{ joke.delivery }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button mat-raised-button color="primary" (click)="openJokeDetails(joke)">View Details</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

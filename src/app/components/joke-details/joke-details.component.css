@@ -1,0 +1,19 @@
+  .modal-container{
+    margin: 35px;
+  }
+  a {
+    color: blue;
+  }
+
+  li {
+    cursor: pointer;
+  }
+
+  mat-card,mat-label,p{
+    width: 80%;
+    padding: 10px;
+  }
+
+  mat-label{
+    color: blueviolet;
+  }
